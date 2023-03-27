@@ -1,6 +1,10 @@
 body {
       font-family: Arial, sans-serif;
-      background-image: url(Artboard\ 1.png)
+      background-image: url(Artboard\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      
     }
     h1 {
       text-align: center;
