@@ -1,0 +1,31 @@
+h1{
+    text-align: left;
+    margin-left: 10%;
+}
+
+img{
+    left:50%;
+    right:50%;
+    vertical-align: middle ;
+}
+.center{
+       display: block;
+       text-align: center;
+}
+p{
+    font-size: 18px;
+    /*font-family: Helvetica; Georgia, Century Gothic:simple and clean , Open Sans, Lato, Palatino */
+    padding: 5px; 
+    line-height: 1.5;
+    margin-left:10%;
+    margin-right: 10%;
+    left:50%;
+    right:50%;
+    float:center
+}
+body{
+    background-image: url(Artboard\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
