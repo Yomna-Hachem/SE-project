@@ -35,13 +35,13 @@ function getTimeslots() {
   timeslotSelect.innerHTML = "<option value=''>--Select a time slot--</option>";
   const selectedDentist = dentistSelect.value;
 
-  // Add timeslots for the doctor selected from the user
+  
   if (selectedDentist) {
     const timeslots = dentists[selectedDentist];
 
     for (let i = 0; i < timeslots.length; i++) {
       const timeslot = timeslots[i];
-      const option = document.createElement("option"); // createElement makes a new element in html
+      const option = document.createElement("option"); 
       option.text = timeslot;
       option.value = timeslot;
       timeslotSelect.appendChild(option);
