@@ -1,12 +1,31 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(Artboard\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+h1 {
+  color: goldenrod;
+  text-align: center;
+  margin-top: 50px;
+}
 form {
     width: 50%;
     margin: auto;
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-           }
-      input[type=text], input[type=password] {
+      }
+      label {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+ input[type=text], input[type=password] {
           width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -15,7 +34,7 @@ form {
     margin-bottom: 20px;
     font-size: 16px;
       }
-      button[type="button"] {
+ button[type="button"] {
     background-color: #e6b17e;
     color: white;
     padding: 12px 20px;
