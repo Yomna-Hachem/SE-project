@@ -1,0 +1,171 @@
+body 
+ {
+  font-family: 'Tiro Devanagari Hindi', serif;
+    background-image: url('background.jpg');
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  
+ 
+  }
+  .center{
+    display: block;
+    text-align: center;
+}
+    img{
+      margin-top: auto;
+      margin-left: auto;
+      margin-right: auto;
+      vertical-align: middle ;
+      float: center;
+      align-items: center;
+    }
+  
+
+    #reem_text{
+      
+      font-size: 20px;
+    padding: 10px; 
+    line-height: 1.5;
+    margin-left:20%;
+    margin-right: 20%;
+    left:30%;
+    right:50%;
+    float:center
+    
+    }
+
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+
+
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  section {
+    padding: 50px;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  footer {
+    background-color: #ea1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  h1{
+    color: #8d0d3e;
+    text-align: center;
+    text-shadow: 5px 5px 5px gray;
+  }
+  .animation {
+
+    animation: example 2s infinite;
+  }
+
+  .text{
+    font-size: bold;
+    font-weight: 400;
+    margin-top: -5px;
+   
+  }
+  
+
+  
+  body{
+   background-image: url(Artboard\ 1.png);
+  }
+  .image-container {
+      margin: 0 1%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+      border: 2px solid white;
+      background-color: white;
+    }
+    
+
+  
+  
+  .image-container img {
+    width: 100%;
+    height: 500px;
+    margin-top: 50px;
+
+  }
+  
+  .image-container p {
+    margin-top: 10px;
+  }
+  
+  
+  .animated-text p {
+    opacity: 0;
+    animation: fade-in 2s forwards;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  
+  
+  
