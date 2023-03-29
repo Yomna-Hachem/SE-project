@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  
+  #slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0.6;
+    z-index: -1;
+  }
+  
+  .paragraph1{
+    
+    position: fixed;
+    top: 200px;
+    left: 1000px;
+    color: #C56E33;
+    font-size: xx-large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation-name: typing;
+    animation-duration: 7s;
+    animation-timing-function: steps(46, end);
+    animation-fill-mode: forwards;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+  .gif{
+    position: absolute;
+    animation-name: slide-right , slide-down;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slide-right {
+    0% {
+      left: -500px;
+     
+    }
+    100%{
+      left:1070px;
+    }
+  }
+  @keyframes slide-down {
+    from {
+      transform: translateY(-100px);
+    }
+    to {
+      transform: translateY(180px);
+    }
+  }
+  
+  
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  #slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  .floating-icons {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+  
+  .floating-icons a {
+    display: block;
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .floating-icons a:hover {
+    transform: scale(1.1);
+  }
+  
+  .floating-icons .telephone {
+    background-image: url(office-phone-icon--25.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #E6B17E;
+  }
+  
+  .floating-icons .whatsapp {
+    background-image: url(dlf.pt-whatsapp-png-66153.png);
+    background-size: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #E6B17E;
+  
+  }
+  
+  .floating-icons .location {
+    background-image: url(dlf.pt-location-icon-png-white-2753283.png);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color:#E6B17E;
+  }
