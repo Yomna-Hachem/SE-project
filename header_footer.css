@@ -19,12 +19,11 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-   bottom: 0;
    left: 0;
    right: 0;
-   height: 30px;   /* Height of the footer */
+   height: 30px; 
    background-color: #a1e1f7;
-    color: #ffffff;
+   color: #ffffff;
     text-align: center;
     padding: 20px;
     
