@@ -17,11 +17,11 @@ header {
 
 footer {
   position: fixed;
-  bottom: 0;
-  width: 100%;
+   bottom: 0;
+   width: 100%;
    left: 0;
    right: 0;
-   height: 30px; 
+   height: 10px; 
    background-color: #a1e1f7;
    color: #ffffff;
     text-align: center;

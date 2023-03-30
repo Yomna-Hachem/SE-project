@@ -29,3 +29,6 @@ body{
     background-size: cover;
     background-position: center;
 }
+.content {
+    margin-bottom: 50px;
+ }
