@@ -1,6 +1,6 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background-image: url(Artboard\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,3 +47,6 @@ form {
   button[type="button"]:hover {
     background-color: #A1E1F7;
   }
+  .content {
+    margin-bottom: 50px;
+ }

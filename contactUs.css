@@ -1,0 +1,81 @@
+
+body 
+ {
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-image: url("Artboard\ 1.png")
+ 
+  }
+
+    
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #05b1d4;
+    height: 100px;
+  }
+
+  .tabs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   
+  
+  }
+    
+  h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: goldenrod;
+   
+  }
+
+  #contactUS{ 
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+  
+  .icons {
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between; 
+  }  
+
+  img{
+    border-radius: 10px;
+  }
+
+
+  .icons h2{
+    text-decoration: none;
+    color: #070707;
+    font-weight: bold;
+    
+
+  }
+
+  img {
+    margin-right: 10px;
+  }
+  
+  footer {
+    background-color: #05b1d4;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
