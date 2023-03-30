@@ -1,3 +1,4 @@
+
 body 
  {
   font-family:  Arial, sans-serif;
@@ -8,7 +9,7 @@ body
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    background-image: url("background.png")
+    background-image: url("Artboard\ 1.png")
  
   }
 
@@ -50,9 +51,14 @@ body
   .icons {
     margin-right: 20px;
     display: flex;
-    justify-content: space-between;
-   
+    justify-content: space-between; 
   }  
+
+  img{
+    border-radius: 10px;
+  }
+
+
   .icons h2{
     text-decoration: none;
     color: #070707;
@@ -73,5 +79,4 @@ body
     position: absolute;
     bottom: 0;
     width: 100%;
-   
   }
