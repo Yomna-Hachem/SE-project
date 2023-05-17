@@ -9,4 +9,5 @@ urlpatterns = [
     path('OnlineBooking', views.OnlineBooking,name='TheKiddoDontist-OnlineBooking'),
     path('Reviews', views.Reviews,name='TheKiddoDontist-Reviews'),
     path('login', views.login,name='TheKiddoDontist-login'),
+
 ]
