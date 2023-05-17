@@ -6,3 +6,6 @@ def aboutus(request):
     return render(request,'TheKiddoDontist/7anafy.html')
 def PediatricDentistry(request):
     return render(request,'TheKiddoDontist/PediatricDentistry.html')
+def GeneralAnesthesia(request):
+    return render(request,'TheKiddoDontist/GeneralAnesthesia.html')
+
