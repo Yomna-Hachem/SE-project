@@ -1,9 +1,13 @@
+{% load static  %}
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'TheKiddoDontist/HeaderAndFooter.css' %}" />
+    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <title>The KiddoDontist</title>
+
 </head>
 <body>
     <header>
@@ -12,18 +16,22 @@
         <nav>
           <ul>
             <li><a href="{% url 'TheKiddoDontist-home' %}">Home</a></li>
+<<<<<<< HEAD
             <li><a href="{% url 'TheKiddoDontist-OnlineBooking' %}" >Online Booking</a></li>
+=======
+            <li><a href="{% url 'TheKiddoDontist-OnlineBooking' %}">Online Booking</a></li>
+>>>>>>> aad6f5efa8b50ca02b1f33d85f02eec9f8701658
             <li><a href="{% url 'TheKiddoDontist-aboutus' %}">About Us</a></li>
             <li class="dropdown">
               <a href="">Services &#9662;</a>
               <ul class="dropdown-menu">
-                <li><a href="PediatricDentistry.html">Pediatric Dentistry</a></li>
-                <li><a href="project.html">General Anesthesia</a></li>
+                <li><a href="{% url 'TheKiddoDontist-PediatricDentistry' %}">Pediatric Dentistry </a></li>
+                <li><a href="{% url 'TheKiddoDontist-GeneralAnesthesia' %}">General Anesthesia</a></li>
               </ul>
             </li>
-            <li><a href="Reviews.html">Reviews</a></li>
-            <li><a href="contactUs.html">Contact Us</a></li>
-            <li><a href="Login.html">login</a></li>
+            <li><a href="{% url 'TheKiddoDontist-Reviews' %}">Reviews</a></li>
+            <li><a href="{% url 'TheKiddoDontist-contactus' %}">Contact Us</a></li>
+            <li><a href="{% url 'TheKiddoDontist-login' %}">login</a></li>
           </ul>
         </nav>
         </header>
