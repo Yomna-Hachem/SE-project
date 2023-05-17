@@ -1,5 +1,6 @@
 {% extends 'TheKiddoDontist/index.html' %}
 {% block differentpart %}
+{% load static  %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="Login.css">
 	<link rel="stylesheet" href="header_footer.css" />
 	<link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+	
+	<link rel="stylesheet" href="{% static 'TheKiddoDontist/login.css' %}" />
 </head>
 <body>
 

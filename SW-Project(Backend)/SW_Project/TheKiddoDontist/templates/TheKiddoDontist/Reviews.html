@@ -1,5 +1,6 @@
 {% extends 'TheKiddoDontist/index.html' %}
 {% block differentpart %}
+{% load static  %}
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
@@ -10,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="header_footer.css">
     <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
     <title>Reviews</title>
+    
+    <link rel="stylesheet" href="{% static 'TheKiddoDontist/reviews.css' %}" />
 </head>
 <body> 
    

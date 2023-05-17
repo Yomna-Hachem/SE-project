@@ -1,0 +1,174 @@
+
+
+body{
+    background-image: url("Artboard\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+#Reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+    
+
+.Reviews-Heading h1{
+    font-size: 50px;
+    font-weight: 500;
+    font-family:  Delicious Handrawn;
+    background-color: rgb(237, 90, 11);
+    color: white;
+    padding:10px 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /*to make the boxes dynamic in case of minimize*/
+    justify-content: center;
+    width:100%;
+
+
+}    
+
+.box{
+    max-width: 500px;
+    height: 230px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgb(250, 242, 242);
+    padding: 20px;
+    cursor: pointer;
+    flex: 1 1 30%;
+    margin: 30px;
+    border-radius: 10px;
+     
+}
+
+p{
+    text-align: justify;
+ 
+}
+
+
+.profile-img{
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     overflow: hidden;
+     margin-right: 10px;
+    
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+     
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.user-name{
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name span{
+    color: rgb(146, 144, 144);
+    font-size: small;
+}
+
+.ratings{
+    color: #f9d71c;
+    margin-left: 180px;
+}
+
+.boxTop{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.box:hover{
+    transform: translateY(-10px); /*every box would move 10px up when the cursor touch it */
+    transition: all ease 0.3s; /*time of transition*/
+}
+
+
+.addReview{
+    width: 600px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgb(250, 242, 242);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    
+    
+}
+.addReview h2 {
+    margin-top: 50px;
+    text-align: center;
+    font-family:  Delicious Handrawn;
+    font-size:xx-large;
+  }
+  
+  .addReview form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    
+
+  }
+  
+  .addReview label {
+    margin-bottom: 10px;
+  }
+  
+  .addReview input,
+  .addReview select,
+  .addReview textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+ 
+    border-color: rgb(237, 90, 11);
+    border-radius: 5px;
+  
+  }
+
+  .addReview button {
+    padding: 10px;
+    background-color: rgb(237, 90, 11);
+    color: rgb(12, 12, 12);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+  
+  .addReview button:hover {
+    background-color: grey;
+ 
+  }
