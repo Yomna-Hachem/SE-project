@@ -1,0 +1,27 @@
+{% extends 'TheKiddoDontist/index.html' %}
+{% block differentpart %}
+{% load static  %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="Login.css">
+	<link rel="stylesheet" href="header_footer.css" />
+	<link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+	
+	<link rel="stylesheet" href="{% static 'TheKiddoDontist/login.css' %}" />
+</head>
+<body>
+
+	<h1>Login </h1>
+	<form>
+		<label for="username">Username:</label><br>
+		<input type="text" id="username" name="username"><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br><br>
+		<button type="button" onclick="login()">Login</button>
+	</form>
+	<script src="{%static 'TheKiddoDontist/login.js'%}"></script>
+</body>
+</html>
+{% endblock %}
