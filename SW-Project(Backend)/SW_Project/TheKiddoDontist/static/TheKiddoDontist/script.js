@@ -1,7 +1,8 @@
+
 var images = [
-    "best-pediatric-dentist.jpg",
-    "Back-to-School-Dental-Checkup-Pleasant-St-Dental-East-Longmeadow-Ma-e1597064370762.jpg",
-    "back3 (2).jpg"
+  "{% static 'TheKiddoDontist/best-pediatric-dentist.jpg' %}",
+  "{% static 'TheKiddoDontist/Back-to-School-Dental-Checkup-Pleasant-St-Dental-East-Longmeadow-Ma-e1597064370762.jpg' %}",
+  "{% static 'TheKiddoDontist/back3 (2).jpg' %}"
   ];
   
   var currentIndex = 0;
