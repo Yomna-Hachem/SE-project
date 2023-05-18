@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'TheKiddoDontist/HeaderAndFooter.css' %}" />
     <link rel="stylesheet" href="{% static 'TheKiddoDontist/background.css' %}" />
-    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'TheKiddoDontist/favicon.ico.png' %}" type="image/x-icon">
     <title>The KiddoDontist</title>
 
 </head>
 <body>
     <header>
-        <h1><a href="index.html"><img src="logo-no-background.png" alt="Your Logo"></a></h1>
+      <h1><a href="index.html"><img src="{% static 'TheKiddoDontist/logo-no-background.png' %}" alt="Your Logo"></a></h1>
+
         
         <nav>
           <ul>

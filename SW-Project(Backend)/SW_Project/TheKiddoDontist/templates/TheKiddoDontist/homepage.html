@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="homepage.css" />
     <link rel="stylesheet" href="header_footer.css" />
-    <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'TheKiddoDontist/favicon.ico.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'TheKiddoDontist/home.css' %}" />
     <title>The KiddoDontist</title>
 
@@ -19,10 +19,9 @@
     
     <body>
       <div id="slideshow">
-        <img src="best-pediatric-dentist.jpg">
-        <img src="Back-to-School-Dental-Checkup-Pleasant-St-Dental-East-Longmeadow-Ma-e1597064370762.jpg">
-        <img src="back3 (2).jpg">
-        
+        <img src="{% static 'TheKiddoDontist/best-pediatric-dentist.jpg' %}" alt="My Image">
+        <img src="{% static 'TheKiddoDontist/Backtoschool.jpg' %}" alt="My Image">
+        <img src="{% static 'TheKiddoDontist/back3 (2).jpg' %}" alt="My Image">  
       </div>
       
     </body>

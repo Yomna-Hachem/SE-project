@@ -1,6 +1,6 @@
 var images = [
     "best-pediatric-dentist.jpg",
-    "Back-to-School-Dental-Checkup-Pleasant-St-Dental-East-Longmeadow-Ma-e1597064370762.jpg",
+    "Backtoschool.jpg",
     "back3 (2).jpg"
   ];
   
