@@ -1,48 +1,90 @@
 {% extends 'TheKiddoDontist/index.html' %}
 {% block differentpart %}
-{% load static  %}
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="homepage.css" />
-    <link rel="stylesheet" href="header_footer.css" />
+
     <link rel="stylesheet" href="{% static 'TheKiddoDontist/home.css' %}" />
     <title>The KiddoDontist</title>
-
   </head>
   <body>
    
-    
-    
-      <div id="slideshow">
-        <img src="{% static 'TheKiddoDontist/best-pediatric-dentist.jpg' %}" alt="My Image">
-        <img src="{% static 'TheKiddoDontist/Back-to-School-Dental-Checkup-Pleasant-St-Dental-East-Longmeadow-Ma-e1597064370762.jpg' %}" alt="My Image">
-        <img src="{% static 'TheKiddoDontist/back3 (2).jpg' %}" alt="My Image">  
-      </div>
-      
-    
-    <p>
-      <div class="paragraph1">
-      WELCOME TO THE KIDDODONTIST,<br> CAN'T WAIT TO SEE YOU KIDDO ... 
-  </div>
-    </p>
 
-  <div class="gif">
-    <img src="{% static '200w.gif' %}">
+    <div id="slideshow"></div>
+
+    <script>
+      var images = [
+        "{% static 'TheKiddoDontist/best-pediatric-dentist.jpg' %}",
+        "{% static 'TheKiddoDontist/Back-to-School-Dental-Checkup-Pleasant-St-Dental-East-Longmeadow-Ma-e1597064370762.jpg' %}",
+        "{% static 'TheKiddoDontist/back3 (2).jpg' %}"
+      ];
+
+      var currentIndex = 0;
+      var slideshowElement = document.getElementById("slideshow");
+
+      function showImage(index) {
+        var image = document.createElement("img");
+        image.src = images[index];
+        image.onload = function () {
+          slideshowElement.appendChild(image);
+          setTimeout(function () {
+            image.style.opacity = 1;
+          }, 100);
+        };
+      }
+
+      function hideImage(image) {
+        setTimeout(function () {
+          image.style.opacity = 0;
+          setTimeout(function () {
+            slideshowElement.removeChild(image);
+          }, 1000);
+        }, 5000);
+      }
+
+      function switchImage() {
+        var image = slideshowElement.querySelector("img");
+        var nextIndex = (currentIndex + 1) % images.length;
+        var nextImage = document.createElement("img");
+        nextImage.src = images[nextIndex];
+        nextImage.onload = function () {
+          slideshowElement.appendChild(nextImage);
+          setTimeout(function () {
+            image.style.opacity = 0;
+            nextImage.style.opacity = 1;
+            setTimeout(function () {
+              slideshowElement.removeChild(image);
+              currentIndex = nextIndex;
+            }, 1000);
+          }, 100);
+        };
+      }
+
+      showImage(currentIndex);
+      setInterval(switchImage, 5000);
+
+    </script>
+  <p>
+    <div class="paragraph1">
+    WELCOME TO THE KIDDODONTIST,<br> CAN'T WAIT TO SEE YOU KIDDO ... 
+</div>
+  </p>
+
+<div class="gif">
+  <img src="{% static '200w.gif' %}">
+</div>
+
+  <div class="floating-icons">
+    <a href="tel:1234567890" class="telephone"><i class="fa fa-phone"></i></a>
+    <a href="https://wa.me/1234567890" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+    <a href="geo:37.7749,-122.4194" class="location"><i class="fa fa-map-marker"></i></a>
   </div>
 
-    <div class="floating-icons">
-      <a href="tel:1234567890" class="telephone"><i class="fa fa-phone"></i></a>
-      <a href="https://wa.me/1234567890" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
-      <a href="geo:37.7749,-122.4194" class="location"><i class="fa fa-map-marker"></i></a>
-    </div>
-    
- 
-    <script src="{%static 'TheKiddoDontist/script.js'%}"></script>
-  
   </body>
 </html>
+
 {% endblock %}
