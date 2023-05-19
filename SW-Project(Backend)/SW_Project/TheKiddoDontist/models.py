@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Appointment(models.Model):
@@ -10,5 +11,18 @@ class Appointment(models.Model):
     dentist = models.CharField(max_length=100)
     timeslot = models.CharField(max_length=100)
 
-    def __str__(self):
+    def returnstring(self):
         return f"{self.first_name} {self.last_name}"
+
+class Review(models.Model):
+    patient = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.TextField()
+    rating = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"Review by {self.patient.username}"
+
+
+
+
+        
