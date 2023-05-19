@@ -49,6 +49,8 @@ def submit_appointment(request):
         return redirect('appointments')
 
     # Handle GET request if needed
+
+
 def appointment(request):
     appointments = Appointment.objects.all()
     return render(request, 'TheKiddoDontist/appointment.html', {'appointments': appointments})
