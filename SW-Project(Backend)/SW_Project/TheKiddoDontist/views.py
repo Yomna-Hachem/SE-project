@@ -46,7 +46,7 @@ def submit_appointment(request):
         appointment.save()
 
         # Redirect to the appointments page
-        return redirect('appointments')
+        return redirect('OnlineBooking')
 
     # Handle GET request if needed
 

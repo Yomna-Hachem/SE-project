@@ -22,7 +22,33 @@ class Review(models.Model):
     def __str__(self):
         return f"Review by {self.patient.username}"
 
+class UserInterfaceMixin:
+    def get_full_name(self):
+        pass
 
+    def get_role(self):
+        pass
 
+class Doctor(models.Model, UserInterfaceMixin):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    specialization = models.CharField(max_length=255)
+    
 
-        
+    def get_full_name(self):
+        return f"Dr. {self.first_name} {self.last_name}"
+
+    def get_role(self):
+        return "doctor"
+    
+class Patient(models.Model, UserInterfaceMixin):
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    age = models.IntegerField()
+    
+
+    def get_full_name(self):
+        return f"{self.first_name} {self.last_name}"
+
+    def get_role(self):
+        return "patient"
