@@ -4,54 +4,57 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <link rel="stylesheet" type="text/css" href="online Booking.css">
-  <link rel="stylesheet" href="header_footer.css" />
-  <link rel="shortcut icon" href="favicon.ico.png" type="image/x-icon">
-  <title>Online Booking  </title>
+<head> 
+  <link rel="stylesheet" type="text/css" href="{% static 'TheKiddoDontist/onlineBooking.css' %}">
+  <link rel="stylesheet" href="{% static 'TheKiddoDontist/header_footer.css' %}">
+  <link rel="shortcut icon" href="{% static 'TheKiddoDontist/favicon.ico.png' %}" type="image/x-icon">
+  <title>Online Booking</title>
   <link rel="stylesheet" href="{% static 'TheKiddoDontist/OnlineBooking.css' %}" />
 </head>
+
 <body>
 
-  <h1>Online Booking </h1>
-  <form onsubmit="return validateForm()" >
-    <label for="f_name"> First Name:</label>
-    <input type="text" id="f_name" name="f_name" pattern="[A-Za-z]+" ><br><br>
+  <h1>Online Booking</h1>
+  <form method="POST" action="{% url 'TheKiddoDontist-appointment' %}">
+    {% csrf_token %}
+    <label for="f_name">First Name:</label>
+    <input type="text" id="f_name" name="f_name" pattern="[A-Za-z]+" required><br><br>
 
-    <label for="l_name">  Last Name:</label>
-    <input type="text" id="l_name" name="l_name" pattern="[A-Za-z]+" ><br><br>
-    
+    <label for="l_name">Last Name:</label>
+    <input type="text" id="l_name" name="l_name" pattern="[A-Za-z]+" required><br><br>
+
     <label for="birthdate">Birthdate:</label>
-  <input type="date" id="birthdate" name="birthdate"><br></br>
+    <input type="date" id="birthdate" name="birthdate" required><br><br>
 
     <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br><br>
-    
+    <input type="email" id="email" name="email" required><br><br>
+
     <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" pattern="[0-9]+"  ><br><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]+" required><br><br>
 
     <label for="dentist">Choose your dentist:</label>
-		<select id="dentist" name="dentist" onchange="getTimeslots()">
-			<option value="">--Select a dentist--</option>
-			<option value="Dr.Reem Fakhry">Dr. Reem Fakhry</option>
-			<option value="Dr.Dina Khaled">Dr. Dina Khaled</option>
-			<option value="Dr.Abadir Ghaly">Dr. Abadir Ghaly</option>
-		</select> <br></br>
+    <select id="dentist" name="dentist" onchange="getTimeslots()" required>
+      <option value="">--Select a dentist--</option>
+      <option value="Dr.Reem Fakhry">Dr. Reem Fakhry</option>
+      <option value="Dr.Dina Khaled">Dr. Dina Khaled</option>
+      <option value="Dr.Abadir Ghaly">Dr. Abadir Ghaly</option>
+    </select> <br><br>
 
-		<label for="timeslots">Choose your preferred day and time: </label>
-		<select id="timeslots" name="timeslots">
-			<option value="">--Select a time slot--</option>
-		</select><br></br>
-		
-		<button type="submit">Book Appointment</button>
-	</form> 
+    <label for="timeslots">Choose your preferred day and time:</label>
+    <select id="timeslots" name="timeslots" required>
+      <option value="">--Select a time slot--</option>
+    </select><br><br>
 
+    <button type="submit">Book Appointment</button>
+  </form>
+<script src="{%static 'TheKiddoDontist/Appointments.js'%}"></script>
   
- 
-  <script src="{%static 'TheKiddoDontist/Appointments.js'%}"></script>
 </body>
+
 </html>
+
 {% endblock %}
+
 
   
 
