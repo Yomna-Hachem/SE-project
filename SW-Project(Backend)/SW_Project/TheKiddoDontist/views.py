@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .models import Appointment
+from django.shortcuts import redirect
 
 def home(request):
     return render(request,'TheKiddoDontist/homepage.html')
@@ -16,26 +18,38 @@ def Reviews(request):
     return render(request,'TheKiddoDontist/Reviews.html')
 def login(request):
     return render(request,'TheKiddoDontist/login.html')
-def appointment(request):
+
+
+def submit_appointment(request):
     if request.method == 'POST':
-        # Extract form data from the request
-        first_name = request.POST.get('f_name')
-        last_name = request.POST.get('l_name')
-        birthdate = request.POST.get('birthdate')
-        email = request.POST.get('email')
-        phone = request.POST.get('phone')
-        dentist = request.POST.get('dentist')
-        timeslots = request.POST.get('timeslots')
+        # Get form data
+        first_name = request.POST['f_name']
+        last_name = request.POST['l_name']
+        birthdate = request.POST['birthdate']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        dentist = request.POST['dentist']
+        timeslot = request.POST['timeslots']
 
-        # Save the form data to the database or perform other actions
-        # Example using Django's ORM:
-        # from .models import Booking
-        # booking = Booking(first_name=first_name, last_name=last_name, birthdate=birthdate, email=email, phone=phone, dentist=dentist, timeslot=timeslot)
-        # booking.save()
+        # Create Appointment instance
+        appointment = Appointment(
+            first_name=first_name,
+            last_name=last_name,
+            birthdate=birthdate,
+            email=email,
+            phone=phone,
+            dentist=dentist,
+            timeslot=timeslot
+        )
 
-        # Redirect to a success page or render a success message
-        return render(request, 'TheKiddoDontist/OnlineBooking.html',{'dentist':dentist})
+        # Save the appointment
+        appointment.save()
 
-    return render(request, 'TheKiddoDontist/appointment.html')
+        # Redirect to the appointments page
+        return redirect('appointments')
 
+    # Handle GET request if needed
+def appointment(request):
+    appointments = Appointment.objects.all()
+    return render(request, 'TheKiddoDontist/appointment.html', {'appointments': appointments})
 

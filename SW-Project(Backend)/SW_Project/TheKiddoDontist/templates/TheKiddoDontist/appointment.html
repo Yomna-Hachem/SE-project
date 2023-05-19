@@ -1,16 +1,14 @@
 {% extends 'TheKiddoDontist/index.html' %}
 {% block differentpart %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <p>{{ dentist }}</p>
-</head>
-<body>
-    
-</body>
-</html>
+  <!-- Other HTML content -->
+
+  <h2>Appointments</h2>
+  <ul>
+    {% for appointment in appointments %}
+      <li>{{ appointment.first_name }} {{ appointment.last_name }} - {{ appointment.timeslot }}</li>
+    {% empty %}
+      <li>No appointments found.</li>
+    {% endfor %}
+  </ul>
+
 {% endblock %}
